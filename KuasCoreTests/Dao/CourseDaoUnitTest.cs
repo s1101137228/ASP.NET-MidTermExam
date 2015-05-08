@@ -47,7 +47,7 @@ namespace KuasCoreTests.Dao
             Assert.AreEqual(course.ID, dbCourse.ID);
 
             Console.WriteLine("課程編號為 = " + dbCourse.ID);
-            Console.WriteLine("課程姓名為 = " + dbCourse.NAME);
+            Console.WriteLine("課程名稱為 = " + dbCourse.NAME);
             Console.WriteLine("課程敘述為 = " + dbCourse.Description);
 
             CourseDao.DeleteCourse(dbCourse);
@@ -112,11 +112,11 @@ namespace KuasCoreTests.Dao
         [TestMethod]
         public void TestCourseDao_GetCourseById()
         {
-            Course Course = CourseDao.GetCourseById("dennis_yen");
-            Assert.IsNotNull(Course);
-            Console.WriteLine("員工編號為 = " + Course.Id);
-            Console.WriteLine("員工姓名為 = " + Course.Name);
-            Console.WriteLine("員工年齡為 = " + Course.Age);
+            Course course = CourseDao.GetCourseById("chinese");
+            Assert.IsNotNull(course);
+            Console.WriteLine("課程編號為 = " + course.ID);
+            Console.WriteLine("課程名稱為 = " + course.NAME);
+            Console.WriteLine("課程敘述為 = " + course.Description);
         }
 
     }
